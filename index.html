@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+    <head>
+
+    	<meta charset="utf-8">
+
+    	<link rel="stylesheet" href=css/style.css>
+
+    	<meta name="viewport" content="width=device-width">
+
+    	<title>税金の計算機</title>
+    	
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <!-- starting look of the website here--
+        	<div id="startDiv">
+        	<p>Hello, Do you want to start your life?</p>
+        	<button onclick="intro()">Generate Life</button> make it so you have to input your name (fictional for ceo name)
+        </div> -- here  --> 
+
+<main class="home">
+
+    <hl class="titleText">
+    	<p>人生の一つの悩み：税金の計算「機」！</p>
+    	<p>Life’s Worst Invention: Tax (Calculator)</p>
+    </hl>
+
+    <div>
+    	<p class="intro">税金の計算機へようこそ！</p>
+    	<section id="content">
+    		<div class="section">
+                <form>
+    			    <h2>
+    			    	年間収入を入力してください Please Enter Your Yearly Salary
+    			    </h2>
+                    <input type="range" id="slider" class="slider" min="100000" max="45000000" step="100000" value="0"/>
+                    <h2 id="output" class="salaryNum">¥0</h2>
+                </form>
+    		</div>
+            <div class="results">
+                <h2>計算結果</h2>
+                <h2>Calculation Results</h2>
+                <div>
+                    <ul id="pills-tab" role="tablist" class="navbar">
+                        <button type="button" id="button1" class="nav-item">課税所得</button>
+                        <button type="button" id="button2" class="nav-item">所得税</button>
+                        <button type="button" id="button3" class="nav-item">住民税</button>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-taxable-income" role="tabpanel" class="tab-pane">
+                        <div class="row">                        
+                            <div class="col" >
+                                <p>所得税の税率は、所得が多くなるに従って段階的に高くなる仕組みになっています。</p>
+                                <p style="font-size: 18px; font-weight: bold;">計算された課税所得金額は ¥
+                                    <b style="color: red;" id="taxable_income">1</b>
+                                    .
+                                </p>
+                            </div>
+                            <div class="col" >
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                年間収入
+                                            </th>
+                                            <th>
+                                                税率
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0 - ¥1,950,000</td>
+                                            <td>5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥1,950,001 - ¥3,300,000</td>
+                                            <td>10%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥3,300,001 - ¥6,950,000</td>
+                                            <td>20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥3,600,001 - ¥9,000,000</td>
+                                            <td>23%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥6,600,001 - ¥18,000,000</td>
+                                            <td>33%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥6,600,001 - ¥40,000,000</td>
+                                            <td>40%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥40,000,001 -> </td>
+                                            <td>45%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                    </div>
+                    <div id="tab-income-tax" role="tabpanel" class="tab-pane">
+                        <div class="row">
+                            <div class="col" >
+                                <p style="font-size: 18px; font-weight: bold;">計算された所得税金額は ¥
+                                    <b style="color: red;" id="income_tax">1</b>
+                                    .
+                                </p>
+                            </div>
+                            <div class="col">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                年間収入
+                                            </th>
+                                            <th>
+                                                計算方法
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0 - ¥1,625,000</td>
+                                            <td>¥550,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥1,625,000 - ¥1,800,000</td>
+                                            <td>課税所得の40% - ¥100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥1,800,000 - ¥3,600,000</td>
+                                            <td>課税所得の30% + ¥80,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥3,600,000 - ¥6,600,000</td>
+                                            <td>課税所得の20% + ¥440,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥6,600,000 - ¥8,500,000</td>
+                                            <td>課税所得の10% + ¥1,100,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>¥8,500,000 -> </td>
+                                            <td>¥1,950,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-resident-tax" role="tabpanel" class="tab-pane">
+                        <p style="line-height: 25px;">住民税は都道府県の4％と市民税の6％を足し合わせて、課税所得の10％と計算する。</p>
+                        <p style="font-size: 18px; font-weight: bold;">計算された住民税金額は ¥
+                            <b style="color: red;" id="resident">1</b>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+    	</section>
+</main>
+
+        <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>--> 
+        <script src="js/main.js"></script> 
+
+
+    </body>
+</html>
