@@ -1,0 +1,171 @@
+
+body {
+	--bg: #ffffff;
+	--font-family: Times New Roman', Times, serif';
+	background-color: var(--bg);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	line-height: 5px;
+	margin-bottom: 5px;
+}
+
+table, th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+/*#region nav*/
+
+.navbar .nav-item {
+	padding: 15px;
+	width: 20%;
+}
+
+.navbar {
+	display: flex;
+}
+
+.nav-item { /* text container */
+	display: inline;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	-webkit-text-fill-color: rgb(4, 109, 0);
+	background-color: greenyellow;
+
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 400;
+	align-items: center;
+
+}
+
+.nav-item:hover {
+	background-color: green;
+	-webkit-text-fill-color: #ffffff;
+}
+
+/*#endregion nav*/
+
+/*#region transitions */
+
+.tab-content {
+	height: 250px;
+	background-color: lightcyan;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.tab-pane {
+	display: none;
+}
+
+/*#endregion */
+
+.titleText {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.intro {
+	width: 100%;
+	font-size: 18px;
+	margin-left: 30px;
+	margin: 30px;
+}
+
+.section {
+	padding-left: 15px;
+	background-color: #2581d0;
+	border-radius: 25px;
+	padding: 15px;
+	-webkit-text-fill-color: var(--bg);
+}
+
+.results {
+	padding-left: 15px;
+}
+
+.slider {
+
+	--c: rgb(90, 216, 146); /* active color */
+	--g: 0px; /* the gap */ 
+	--l: 4px; /* line thickness*/
+	--s: 30px; /* thumb size*/
+	
+	appearance: none;
+	width: 75%;
+	height: var(--s); /* for firefox */
+	border-radius: 5px;
+	background: none;
+	outline: none;
+	display: inline-block;
+	overflow: hidden;
+
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: var(--s);
+	height: var(--s);
+	aspect-ratio: 1;
+	border-radius: 75%;
+	box-shadow: 0 0 0 var(--l) inset var(--c);
+	border: 8px solid --c;
+	cursor: pointer;
+	border-image: linear-gradient(90deg,var(--c) 50%,white 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+
+}
+
+.slider::-moz-range-thumb {
+	-moz-appearance: none;
+	appearance: none;
+	width: var(--s);
+	height: var(--s);
+	aspect-ratio: 1;
+	background: none;
+	border: 8px solid --c;
+	border-radius: 50%;
+	box-shadow: 0 0 0 var(--l) inset var(--c);
+	cursor: pointer;
+	border-image: linear-gradient(90deg,var(--c) 50%,white 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+}
+
+input[type="range" i]::-webkit-slider-thumb {
+	box-shadow: 0 0 0 var(--_b,var(--l)) inset var(--c);
+	transition: .3s;
+  }
+  
+  input[type="range" i]::-moz-range-thumb {
+	box-shadow: 0 0 0 var(--_b,var(--l)) inset var(--c);
+	transition: .3s;
+  }
+  
+  input:active,
+  input:focus-visible {
+	--_b:  var(--s);
+  }
+
+.salaryNum {
+	display: inline-block;
+	padding-inline-start: 12%;
+}
