@@ -142,7 +142,7 @@ table, th, td {
 	width: var(--s);
 	height: var(--s);
 	aspect-ratio: 1;
-	background: none;
+	background: white;
 	border: 8px solid --c;
 	border-radius: 50%;
 	box-shadow: 0 0 0 var(--l) inset var(--c);
